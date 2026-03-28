@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
+    title: config.site.title,
     description: config.site.description,
   };
 }
