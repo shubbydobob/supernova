@@ -12,7 +12,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
-    title: "Home",
     description: config.site.description,
   };
 }
