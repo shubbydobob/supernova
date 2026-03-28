@@ -21,32 +21,58 @@ export function Header({ brandName, navigation }: HeaderProps) {
 
   return (
     <header className="z-40 border-b border-stone/70 bg-white">
-      <Container className="flex min-h-11 items-center justify-between gap-4 border-b border-stone/60 text-[11px] uppercase tracking-[0.28em] text-ink/70">
-        <Link href="/" className="py-3 font-medium">
-          SU.PERNOVA_
-        </Link>
-        <a
-          href="https://instagram.com/su.pernova_"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden py-3 md:inline-flex"
-        >
-          Instagram
-        </a>
-        <button
-          type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center text-xs font-medium text-ink md:hidden"
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          onClick={() => setIsOpen((value) => !value)}
-        >
-          <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
-          <span aria-hidden="true">{isOpen ? "닫기" : "메뉴"}</span>
-        </button>
-      </Container>
+      <div className="md:hidden">
+        <Container className="grid min-h-16 grid-cols-[48px_1fr_48px] items-center">
+          <button
+            type="button"
+            className="inline-flex h-12 w-12 items-center justify-center text-ink"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            onClick={() => setIsOpen((value) => !value)}
+          >
+            <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
+            <span aria-hidden="true" className="flex h-5 w-6 flex-col justify-between">
+              <span className="block h-px w-full bg-current" />
+              <span className="block h-px w-full bg-current" />
+              <span className="block h-px w-full bg-current" />
+            </span>
+          </button>
 
-      <Container className="flex items-center justify-center py-5">
+          <Link href="/" className="text-center text-[18px] font-semibold tracking-[-0.02em] text-ink">
+            {brandName}
+          </Link>
+
+          <Link
+            href="/portfolio"
+            className="inline-flex h-12 w-12 items-center justify-center text-ink"
+            aria-label="View portfolio"
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" strokeLinecap="round" />
+            </svg>
+          </Link>
+        </Container>
+      </div>
+
+      <div className="hidden md:block">
+        <Container className="flex min-h-11 items-center justify-between gap-4 border-b border-stone/60 text-[11px] uppercase tracking-[0.28em] text-ink/70">
+          <Link href="/" className="py-3 font-medium">
+            SU.PERNOVA_
+          </Link>
+          <a
+            href="https://instagram.com/su.pernova_"
+            target="_blank"
+            rel="noreferrer"
+            className="py-3"
+          >
+            Instagram
+          </a>
+        </Container>
+      </div>
+
+      <Container className="hidden items-center justify-center py-5 md:flex">
         <Link href="/" aria-label={brandName}>
           <Image
             src="/brand/logo-top.jpg"

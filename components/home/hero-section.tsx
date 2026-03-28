@@ -12,8 +12,8 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
   const heroImage = heroItem.images[0] ?? heroItem.thumbnail;
 
   return (
-    <Section className="pt-6 sm:pt-10" containerClassName="space-y-6">
-      <div className="space-y-3">
+    <Section className="pt-0 sm:pt-10" containerClassName="space-y-0 sm:space-y-6">
+      <div className="hidden space-y-3 sm:block">
         <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-clay">SU.PERNOVA_</p>
         <h1 className="max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
           {config.brand.tagline}
@@ -26,11 +26,11 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
         width={1600}
         height={1200}
         priority
-        wrapperClassName="overflow-hidden rounded-[2rem] border border-stone bg-white shadow-card"
+        wrapperClassName="overflow-hidden bg-white sm:rounded-[2rem] sm:border sm:border-stone sm:shadow-card"
         className="aspect-[4/5] sm:aspect-[16/10]"
       />
 
-      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="hidden flex-col items-start gap-4 sm:flex sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">
           <p className="text-xs uppercase tracking-[0.24em] text-clay">{heroItem.category}</p>
           <p className="text-lg font-semibold text-ink">{heroItem.title}</p>
