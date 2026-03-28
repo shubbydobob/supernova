@@ -18,7 +18,7 @@ export function MobileMenu({ brandName, currentPath, isOpen, items, onClose }: M
     <div
       id="mobile-menu"
       className={cn(
-        "border-t border-stone bg-white md:hidden",
+        "border-t border-stone bg-white lg:hidden",
         isOpen ? "block" : "hidden",
       )}
     >

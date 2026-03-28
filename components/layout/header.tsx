@@ -21,7 +21,7 @@ export function Header({ brandName, navigation }: HeaderProps) {
 
   return (
     <header className="z-40 border-b border-stone/70 bg-white">
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <Container className="grid min-h-16 grid-cols-[48px_1fr_48px] items-center">
           <button
             type="button"
@@ -56,7 +56,7 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Container>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Container className="flex min-h-11 items-center justify-between gap-4 border-b border-stone/60 text-[11px] uppercase tracking-[0.28em] text-ink/70">
           <Link href="/" className="py-3 font-medium">
             SU.PERNOVA_
@@ -72,7 +72,7 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Container>
       </div>
 
-      <Container className="hidden items-center justify-center py-5 md:flex">
+      <Container className="hidden items-center justify-center py-5 lg:flex">
         <Link href="/" aria-label={brandName}>
           <Image
             src="/brand/logo-top.jpg"
@@ -85,7 +85,7 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Link>
       </Container>
 
-      <Container className="hidden border-t border-stone/60 md:flex">
+      <Container className="hidden border-t border-stone/60 lg:flex">
         <nav aria-label="Primary" className="flex min-h-12 items-center gap-8 text-[12px] font-medium uppercase tracking-[0.24em]">
           {navigation.map((item) => {
             const isActive = item.href === pathname;
