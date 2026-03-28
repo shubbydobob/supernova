@@ -37,8 +37,8 @@ export default async function HomePage() {
       <FeaturedPortfolio items={featuredPortfolio} />
       <ServicesOverview services={featuredServices} />
 
-      <Section className="pt-0">
-        <div className="flex flex-col gap-3 border-t border-stone/80 pt-8 sm:flex-row">
+      <Section className="pt-2 lg:pt-4">
+        <div className="flex flex-col gap-3 border-t border-stone/80 pt-5 sm:flex-row lg:pt-8">
           <CTAButton href="/portfolio">Portfolio</CTAButton>
           <CTAButton href="/services" variant="secondary">
             Services

@@ -16,7 +16,7 @@ export function Section({
   children,
 }: SectionProps) {
   return (
-    <Component className={cn("py-14 sm:py-20", className)}>
+    <Component className={cn("py-8 lg:py-14", className)}>
       <Container className={containerClassName}>{children}</Container>
     </Component>
   );

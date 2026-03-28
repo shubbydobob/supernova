@@ -16,7 +16,7 @@ export function PortfolioGrid({ items, detailHrefBuilder }: PortfolioGridProps) 
   }
 
   return (
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-0 md:gap-5 md:grid-cols-2 xl:grid-cols-3">
       {items.map((item) => (
         <PortfolioCard key={item.slug} item={item} href={detailHrefBuilder?.(item)} />
       ))}
