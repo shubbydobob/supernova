@@ -27,7 +27,7 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
         height={1200}
         priority
         wrapperClassName="overflow-hidden bg-white lg:rounded-[2rem] lg:border lg:border-stone lg:shadow-card"
-        className="aspect-[11/10] lg:aspect-[16/10]"
+        className="aspect-[11/10] object-contain object-top lg:aspect-[16/10] lg:object-cover"
       />
 
       <div className="hidden flex-col items-start gap-4 lg:flex lg:flex-row lg:items-center lg:justify-between">

@@ -23,7 +23,7 @@ export function PortfolioCard({ item, href }: PortfolioCardProps) {
           width={900}
           height={1100}
           wrapperClassName="bg-sand"
-          className="aspect-[11/10] md:aspect-[4/5]"
+          className="aspect-[11/10] object-contain object-top md:aspect-[4/5] md:object-cover"
         />
       </Link>
       <div className="space-y-2 px-4 py-4 md:px-2">
