@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" role="img" aria-labelledby="title desc">
+  <title id="title">Han River Pre-Wedding Thumbnail</title>
+  <desc id="desc">Warm abstract placeholder image for a pre-wedding photography project.</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6d8c6" />
+      <stop offset="100%" stop-color="#aa735d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="960" fill="url(#g)" />
+  <circle cx="860" cy="240" r="180" fill="#fff4eb" fill-opacity="0.65" />
+  <rect x="140" y="210" width="420" height="540" rx="42" fill="#fffaf6" fill-opacity="0.55" />
+</svg>

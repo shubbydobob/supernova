@@ -1,0 +1,25 @@
+{
+  "slug": "portrait-sessions",
+  "title": "Profile Photo Plus",
+  "description": "A profile shoot with a little more sequence and variation.",
+  "shortDescription": "Profile-focused session with extra cuts.",
+  "pricing": "Starting from KRW 450,000",
+  "duration": "60 to 90 minutes",
+  "deliverables": [
+    "Edited selection",
+    "Mood and outfit guidance",
+    "Private gallery"
+  ],
+  "images": [
+    "/images/reference/man-profile-01.jpg",
+    "/images/reference/man-profile-02.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": true,
+  "order": 2,
+  "seo": {
+    "title": "Profile Photo Plus Service",
+    "description": "Profile photo session with extra image variation, simple direction, and external Naver Booking support.",
+    "ogImage": "/images/reference/man-profile-01.jpg"
+  }
+}

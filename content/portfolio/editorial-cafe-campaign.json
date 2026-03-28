@@ -1,0 +1,18 @@
+{
+  "slug": "editorial-cafe-campaign",
+  "title": "Lookbook Photo",
+  "description": "A compact lookbook edit with clean rhythm and mood.",
+  "category": "commercial",
+  "thumbnail": "/images/reference/lookbook-01.jpg",
+  "images": [
+    "/images/reference/lookbook-01.jpg",
+    "/images/reference/lookbook-02.jpg"
+  ],
+  "featured": true,
+  "date": "2025-04-12",
+  "seo": {
+    "title": "Lookbook Photography",
+    "description": "Lookbook photography with a clean sequence, balanced frame, and restrained commercial mood.",
+    "ogImage": "/images/reference/lookbook-01.jpg"
+  }
+}

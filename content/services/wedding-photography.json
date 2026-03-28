@@ -1,0 +1,25 @@
+{
+  "slug": "wedding-photography",
+  "title": "Profile Photo",
+  "description": "A profile-focused shoot with light direction and a soft result.",
+  "shortDescription": "Natural light profile session.",
+  "pricing": "Starting from KRW 2,800,000",
+  "duration": "Up to 10 hours",
+  "deliverables": [
+    "Selected final edits",
+    "Preview delivery",
+    "Simple session guidance"
+  ],
+  "images": [
+    "/images/reference/home-hero-02.jpeg",
+    "/images/reference/woman-profile-02.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": true,
+  "order": 1,
+  "seo": {
+    "title": "Profile Photo Service",
+    "description": "Profile photo service with natural light, a quiet mood, and an external Naver Booking reservation flow.",
+    "ogImage": "/images/reference/home-hero-02.jpeg"
+  }
+}

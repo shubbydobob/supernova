@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "Supernova Photography",
+    "description": "Mobile-first photography portfolio and service site for brand storytelling, portrait sessions, and reservation-ready service discovery.",
+    "url": "https://supernova-photo.example",
+    "locale": "ko-KR"
+  },
+  "brand": {
+    "name": "su.pernova_",
+    "tagline": "Profile, lookbook, and image work.",
+    "bio": "A quiet image-based portfolio for profile, lookbook, and commissioned work.",
+    "email": "murmurmur100@naver.com",
+    "phone": "+82-10-1234-5678"
+  },
+  "social": {
+    "instagram": "https://instagram.com/su.pernova_"
+  },
+  "navigation": {
+    "header": [
+      { "label": "PROFILE", "href": "/portfolio" },
+      { "label": "LOOKBOOK PHOTO", "href": "/services" },
+      { "label": "ART WORK", "href": "/portfolio" }
+    ],
+    "footer": [
+      { "label": "About", "href": "/about" },
+      { "label": "Portfolio", "href": "/portfolio" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "FAQ", "href": "/faq" }
+    ]
+  },
+  "analytics": {
+    "vercelAnalytics": false
+  }
+}

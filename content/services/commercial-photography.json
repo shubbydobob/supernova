@@ -1,0 +1,25 @@
+{
+  "slug": "commercial-photography",
+  "title": "Lookbook Shoot",
+  "description": "A lookbook-oriented shoot built around shape, styling, and edit rhythm.",
+  "shortDescription": "Clean lookbook-focused image set.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/reference/lookbook-01.jpg",
+    "/images/reference/lookbook-02.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": true,
+  "order": 3,
+  "seo": {
+    "title": "Lookbook Shoot Service",
+    "description": "Lookbook shoot service with clean visual rhythm, restrained styling, and external Naver Booking compatibility.",
+    "ogImage": "/images/reference/lookbook-01.jpg"
+  }
+}

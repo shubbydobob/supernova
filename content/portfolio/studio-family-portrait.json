@@ -1,0 +1,18 @@
+{
+  "slug": "studio-family-portrait",
+  "title": "Man Profile",
+  "description": "Simple profile portrait with a calm, direct composition.",
+  "category": "portrait",
+  "thumbnail": "/images/reference/man-profile-01.jpg",
+  "images": [
+    "/images/reference/man-profile-01.jpg",
+    "/images/reference/man-profile-02.jpg"
+  ],
+  "featured": true,
+  "date": "2025-07-09",
+  "seo": {
+    "title": "Man Profile Photography",
+    "description": "Minimal profile portrait photography with direct framing, clean light, and a calm editorial tone.",
+    "ogImage": "/images/reference/man-profile-01.jpg"
+  }
+}
