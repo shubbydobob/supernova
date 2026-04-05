@@ -15,7 +15,7 @@ export function MainVideoSection() {
             preload="metadata"
             poster="/images/reference/home-hero-03.jpeg"
           >
-            <source src="/videos/reference-main-video.mp4" type="video/mp4" />
+            <source src="/videos/main-video.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
