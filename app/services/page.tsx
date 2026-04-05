@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 
-import { ServiceGrid } from "@/components/services/service-grid";
-import { CTAButton } from "@/components/shared/cta-button";
-import { PageIntro } from "@/components/shared/page-intro";
-import { Section } from "@/components/shared/section";
-import { getShootServices, getSiteConfig } from "@/lib/content";
+import { getSiteConfig } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
@@ -21,24 +17,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ServicesPage() {
-  const services = await getShootServices();
-
-  return (
-    <>
-      <PageIntro
-        eyebrow="Services"
-        title="Simple shoot options."
-        description=""
-        actions={
-          <>
-            <CTAButton href="/portfolio">Portfolio</CTAButton>
-          </>
-        }
-      />
-
-      <Section>
-        <ServiceGrid services={services} />
-      </Section>
-    </>
-  );
+  return null;
 }
