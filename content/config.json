@@ -18,7 +18,7 @@
   "navigation": {
     "header": [
       { "label": "PROFILE", "href": "/portfolio" },
-      { "label": "LOOKBOOK PHOTO", "href": "/services" },
+      { "label": "LOOKBOOK", "href": "/services" },
       { "label": "ART WORK", "href": "/portfolio" }
     ],
     "footer": [

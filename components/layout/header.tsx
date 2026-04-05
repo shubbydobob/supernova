@@ -55,12 +55,12 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Container>
       </div>
 
-      <Container className="hidden lg:grid lg:min-h-24 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+      <Container className="hidden lg:grid lg:min-h-16 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
         <div />
         <Link
           href="/"
           aria-label={brandName}
-          className="text-center font-serif text-[4.4rem] uppercase leading-none tracking-[-0.05em] text-ink"
+          className="text-center font-serif text-[2.6rem] uppercase leading-none tracking-[-0.04em] text-ink"
         >
           SU.PERNOVA_
         </Link>

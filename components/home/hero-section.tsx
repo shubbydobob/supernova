@@ -12,9 +12,9 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
   const heroImage = heroItem.images[0] ?? heroItem.thumbnail;
 
   return (
-    <Section className="pt-0 lg:pt-10" containerClassName="space-y-0 px-0 lg:space-y-6 lg:px-6">
+    <Section className="pt-0 lg:pt-4" containerClassName="space-y-0 px-0 lg:space-y-4 lg:px-6">
       <div className="hidden lg:block">
-        <h1 className="max-w-2xl font-serif text-[4.25rem] uppercase leading-none tracking-[-0.05em] text-ink">
+        <h1 className="max-w-2xl font-serif text-[2.5rem] uppercase leading-none tracking-[-0.04em] text-ink">
           {config.brand.tagline}
         </h1>
       </div>
