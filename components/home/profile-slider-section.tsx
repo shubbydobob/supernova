@@ -104,7 +104,7 @@ export function ProfileSliderSection({
 
       {hideDetails ? null : (
         <div className="space-y-2 px-1">
-          <p className="text-[1.6rem] font-semibold tracking-[-0.03em] text-ink">{visibleSlide.title}</p>
+          <p className="text-[19px] font-semibold tracking-[-0.03em] text-ink">{visibleSlide.title}</p>
           <Link
             href={visibleSlide.href}
             className="inline-flex text-sm text-ink/60 underline underline-offset-4 hover:text-ink"
