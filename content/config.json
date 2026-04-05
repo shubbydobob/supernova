@@ -19,7 +19,7 @@
     "header": [
       { "label": "PROFILE", "href": "/portfolio" },
       { "label": "LOOKBOOK", "href": "/lookbook" },
-      { "label": "ART WORK", "href": "/portfolio" }
+      { "label": "ART WORK", "href": "/artwork" }
     ],
     "footer": [
       { "label": "About", "href": "/about" },
