@@ -4,7 +4,7 @@ export function MainVideoSection() {
   return (
     <Section className="pt-0" containerClassName="px-0 lg:px-6">
       <div className="space-y-3">
-        <p className="px-4 text-left text-xs font-semibold tracking-[0.24em] text-ink sm:px-6 lg:px-0">Identity</p>
+        <p className="text-left text-xs font-semibold tracking-[0.24em] text-ink">Identity</p>
         <div className="overflow-hidden bg-white lg:rounded-[2rem] lg:border lg:border-stone lg:shadow-card">
           <video
             className="aspect-[11/10] w-full object-cover lg:aspect-[16/10]"

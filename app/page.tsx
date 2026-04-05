@@ -6,8 +6,6 @@ import { HeroSection } from "@/components/home/hero-section";
 import { MainVideoSection } from "@/components/home/main-video-section";
 import { ProfileSliderSection } from "@/components/home/profile-slider-section";
 import { ServicesOverview } from "@/components/home/services-overview";
-import { CTAButton } from "@/components/shared/cta-button";
-import { Section } from "@/components/shared/section";
 import { getFeaturedPortfolioItems, getFeaturedShootServices, getSiteConfig } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -67,18 +65,6 @@ export default async function HomePage() {
       <ProfileSliderSection items={profileSlides} />
       <ServicesOverview services={featuredServices} />
       <MainVideoSection />
-
-      <Section className="pt-2 lg:pt-4">
-        <div className="flex flex-col gap-3 border-t border-stone/80 pt-5 sm:flex-row lg:pt-8">
-          <CTAButton href="/portfolio">Portfolio</CTAButton>
-          <CTAButton href="/services" variant="secondary">
-            Services
-          </CTAButton>
-          <CTAButton href="/contact" variant="secondary">
-            Contact
-          </CTAButton>
-        </div>
-      </Section>
     </>
   );
 }
