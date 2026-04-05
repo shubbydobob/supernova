@@ -18,13 +18,13 @@
   "navigation": {
     "header": [
       { "label": "PROFILE", "href": "/portfolio" },
-      { "label": "LOOKBOOK", "href": "/services" },
+      { "label": "LOOKBOOK", "href": "/lookbook" },
       { "label": "ART WORK", "href": "/portfolio" }
     ],
     "footer": [
       { "label": "About", "href": "/about" },
       { "label": "Portfolio", "href": "/portfolio" },
-      { "label": "Lookbook", "href": "/services" },
+      { "label": "Lookbook", "href": "/lookbook" },
       { "label": "Contact", "href": "/contact" },
       { "label": "FAQ", "href": "/faq" }
     ]

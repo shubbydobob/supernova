@@ -46,13 +46,13 @@ export default async function HomePage() {
     {
       image: "/images/custom/lookbook-kid.jpg",
       title: "LOOKBOOK KIDS 촬영",
-      href: "/services",
+      href: "/lookbook",
       linkLabel: "자세히 살펴보기",
     },
     {
       image: "/images/custom/lookbook-adult.jpg",
       title: "LOOKBOOK ADULT 촬영",
-      href: "/services",
+      href: "/lookbook",
       linkLabel: "자세히 살펴보기",
     },
   ];

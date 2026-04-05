@@ -72,11 +72,11 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Next Step</p>
             <h2 className="text-2xl font-semibold text-ink">Interested in a similar session or visual direction?</h2>
             <p className="max-w-2xl text-sm leading-6 text-ink/75 sm:text-base">
-              Explore services or send a quick inquiry.
+              Explore lookbook or send a quick inquiry.
             </p>
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <CTAButton href="/services">Explore services</CTAButton>
+            <CTAButton href="/lookbook">Explore lookbook</CTAButton>
             <CTAButton href="/contact" variant="secondary">
               Start an inquiry
             </CTAButton>

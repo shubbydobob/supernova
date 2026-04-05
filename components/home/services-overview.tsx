@@ -18,13 +18,13 @@ interface ServicesOverviewProps {
 
 export function ServicesOverview({ services: _services }: ServicesOverviewProps) {
   const sliderItems = [
-    { image: artWorkImage01, title: "ART WORK 1", href: "/services" },
-    { image: artWorkImage02, title: "ART WORK 2", href: "/services" },
-    { image: artWorkImage03, title: "ART WORK 3", href: "/services" },
-    { image: artWorkImage04, title: "ART WORK 4", href: "/services" },
-    { image: artWorkImage05, title: "ART WORK 5", href: "/services" },
-    { image: artWorkImage06, title: "ART WORK 6", href: "/services" },
-    { image: artWorkImage07, title: "ART WORK 7", href: "/services" },
+    { image: artWorkImage01, title: "ART WORK 1", href: "/lookbook" },
+    { image: artWorkImage02, title: "ART WORK 2", href: "/lookbook" },
+    { image: artWorkImage03, title: "ART WORK 3", href: "/lookbook" },
+    { image: artWorkImage04, title: "ART WORK 4", href: "/lookbook" },
+    { image: artWorkImage05, title: "ART WORK 5", href: "/lookbook" },
+    { image: artWorkImage06, title: "ART WORK 6", href: "/lookbook" },
+    { image: artWorkImage07, title: "ART WORK 7", href: "/lookbook" },
   ];
 
   return (

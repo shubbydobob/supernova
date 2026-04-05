@@ -36,8 +36,8 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
         </div>
         <div className="flex flex-col gap-3 lg:flex-row">
           <CTAButton href="/portfolio">View portfolio</CTAButton>
-          <CTAButton href="/services" variant="secondary">
-            Explore services
+          <CTAButton href="/lookbook" variant="secondary">
+            Explore lookbook
           </CTAButton>
         </div>
       </div>

@@ -8,7 +8,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service, detailHref }: ServiceCardProps) {
-  const safeHref = detailHref ?? `/services/${service.slug}`;
+  const safeHref = detailHref ?? `/lookbook/${service.slug}`;
 
   return (
     <article
