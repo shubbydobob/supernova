@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import artWorkImage from "@/screen/art_work.jpg";
 
 import { FeaturedPortfolio } from "@/components/home/featured-portfolio";
 import { HomeCategoryNav } from "@/components/home/home-category-nav";
@@ -35,7 +34,7 @@ export default async function HomePage() {
 
   const profileSlides = [
     {
-      image: artWorkImage,
+      image: heroItem.images[1] ?? heroItem.thumbnail,
       title: "자연광 프로필 촬영",
       href: `/portfolio/${heroItem.slug}`,
       linkLabel: "자세히 살펴보기",
@@ -64,8 +63,8 @@ export default async function HomePage() {
     <>
       <HomeCategoryNav items={config.navigation.header} />
       <HeroSection config={config} heroItem={heroItem} />
-      <ProfileSliderSection items={profileSlides} />
       <FeaturedPortfolio />
+      <ProfileSliderSection items={profileSlides} />
       <ServicesOverview services={featuredServices} />
       <MainVideoSection />
 
