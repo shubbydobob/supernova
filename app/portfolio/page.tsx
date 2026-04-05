@@ -8,10 +8,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
-    title: "Portfolio",
+    title: "Profile",
     description: "Browse featured photography work across weddings, portraits, and commercial storytelling.",
     openGraph: {
-      title: `Portfolio | ${config.site.title}`,
+      title: `Profile | ${config.site.title}`,
       description: "Browse featured photography work across weddings, portraits, and commercial storytelling.",
       url: `${config.site.url}/portfolio`,
     },
@@ -26,7 +26,7 @@ export default async function PortfolioPage() {
     <>
       <Section className="pt-6 sm:pt-10">
         <div className="border-b border-stone/80 pb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Portfolio</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Profile</p>
         </div>
       </Section>
 

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PortfolioDetailPageProps): Pr
 
   if (!item) {
     return {
-      title: "Portfolio Item Not Found",
+      title: "Profile Item Not Found",
     };
   }
 
@@ -54,7 +54,7 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
-          { label: "Portfolio", href: "/portfolio" },
+          { label: "Profile", href: "/portfolio" },
           { label: item.title },
         ]}
       />

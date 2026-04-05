@@ -27,7 +27,6 @@ export function PortfolioCard({ item, href }: PortfolioCardProps) {
         />
       </Link>
       <div className="space-y-2 px-4 py-4 md:px-2">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clay">{item.category}</p>
         <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
         <Link href={safeHref} className="inline-flex text-sm font-semibold text-ink hover:text-clay">
           View work
