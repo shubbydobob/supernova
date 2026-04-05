@@ -24,6 +24,12 @@ export default async function PortfolioPage() {
 
   return (
     <>
+      <Section className="pt-6 sm:pt-10">
+        <div className="border-b border-stone/80 pb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Portfolio</p>
+        </div>
+      </Section>
+
       <Section>
         <PortfolioGrid items={visibleItems} />
       </Section>
