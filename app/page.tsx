@@ -47,7 +47,7 @@ export default async function HomePage() {
     },
     {
       image: "/images/custom/lookbook-kid.jpg",
-      title: "LOOKBOOK KID 촬영",
+      title: "LOOKBOOK KIDS 촬영",
       href: "/services",
       linkLabel: "자세히 살펴보기",
     },
