@@ -57,7 +57,11 @@ export default async function RootLayout({
     <html lang="ko">
       <body className={`${montserrat.variable} ${notoSansKr.variable} min-h-screen text-ink antialiased`}>
         <div className="flex min-h-screen flex-col">
-          <Header brandName={config.brand.name} navigation={config.navigation.header} />
+          <Header
+            brandName={config.brand.name}
+            navigation={config.navigation.header}
+            instagramUrl={config.social.instagram}
+          />
           <main className="flex-1">{children}</main>
           <Footer config={config} />
         </div>

@@ -51,6 +51,7 @@
 - Avoid duplicate desktop navigation rows if the same information is already shown elsewhere on the page.
 - Keep the main hero text minimal.
 - If requested, prefer a single short title such as `Independent`.
+- On mobile, the right-side header action currently uses an Instagram icon and should link directly to the official Instagram account instead of a search or portfolio shortcut.
 
 ## Content Rules
 - Use local JSON content files.

@@ -12,9 +12,10 @@ import type { NavItem, SiteConfig } from "@/types/content";
 interface HeaderProps {
   brandName: SiteConfig["brand"]["name"];
   navigation: NavItem[];
+  instagramUrl?: SiteConfig["social"]["instagram"];
 }
 
-export function Header({ brandName, navigation }: HeaderProps) {
+export function Header({ brandName, navigation, instagramUrl }: HeaderProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -42,16 +43,19 @@ export function Header({ brandName, navigation }: HeaderProps) {
             {brandName}
           </Link>
 
-          <Link
-            href="/portfolio"
+          <a
+            href={instagramUrl ?? "https://instagram.com/su.pernova_"}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex h-12 w-12 items-center justify-center text-ink"
-            aria-label="View portfolio"
+            aria-label="Visit Instagram"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <circle cx="11" cy="11" r="7" />
-              <path d="m20 20-3.5-3.5" strokeLinecap="round" />
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+              <circle cx="12" cy="12" r="4.25" />
+              <circle cx="17.25" cy="6.75" r="0.75" fill="currentColor" stroke="none" />
             </svg>
-          </Link>
+          </a>
         </Container>
       </div>
 
