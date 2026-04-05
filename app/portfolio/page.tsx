@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
 import { PortfolioGrid } from "@/components/portfolio/portfolio-grid";
-import { CTAButton } from "@/components/shared/cta-button";
-import { PageIntro } from "@/components/shared/page-intro";
 import { Section } from "@/components/shared/section";
 import { getPortfolioItems, getSiteConfig } from "@/lib/content";
 
@@ -22,22 +20,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function PortfolioPage() {
   const items = await getPortfolioItems();
+  const visibleItems = items.filter((item) => item.slug !== "editorial-cafe-campaign");
 
   return (
     <>
-      <PageIntro
-        eyebrow="Portfolio"
-        title="Selected image work."
-        description=""
-        actions={
-          <>
-            <CTAButton href="/services">Services</CTAButton>
-          </>
-        }
-      />
-
       <Section>
-        <PortfolioGrid items={items} />
+        <PortfolioGrid items={visibleItems} />
       </Section>
     </>
   );
