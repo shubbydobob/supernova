@@ -57,6 +57,7 @@ export default function ArtworkPage() {
                 alt={`Artwork ${index + 1}`}
                 width={900}
                 height={1100}
+                unoptimized
                 wrapperClassName="bg-sand"
                 className="aspect-[11/10] object-contain object-top md:aspect-[4/5] md:object-cover"
               />
