@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { FeaturedPortfolio } from "@/components/home/featured-portfolio";
+import { HomeCategoryNav } from "@/components/home/home-category-nav";
 import { HeroSection } from "@/components/home/hero-section";
 import { MainVideoSection } from "@/components/home/main-video-section";
 import { ServicesOverview } from "@/components/home/services-overview";
@@ -32,6 +33,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <HomeCategoryNav items={config.navigation.header} />
       <HeroSection config={config} heroItem={heroItem} />
       <MainVideoSection />
       <FeaturedPortfolio items={featuredPortfolio} />
