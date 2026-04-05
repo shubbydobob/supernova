@@ -54,7 +54,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
-          { label: "Services", href: "/services" },
+          { label: "Lookbook", href: "/services" },
           { label: service.title },
         ]}
       />

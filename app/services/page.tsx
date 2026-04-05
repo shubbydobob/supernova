@@ -6,10 +6,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
-    title: "Services",
+    title: "Lookbook",
     description: "Explore available photography services with key details and external Naver reservation compatibility.",
     openGraph: {
-      title: `Services | ${config.site.title}`,
+      title: `Lookbook | ${config.site.title}`,
       description: "Explore available photography services with key details and external Naver reservation compatibility.",
       url: `${config.site.url}/services`,
     },
