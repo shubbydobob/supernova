@@ -21,10 +21,10 @@ interface ProfileSliderSectionProps {
 
 export function ProfileSliderSection({
   title = "PHOTO WORK",
-  subtitle = "진행 중인 프로필 사진",
+  subtitle,
   items,
 }: ProfileSliderSectionProps) {
-  const slides = useMemo(() => items.slice(0, 2), [items]);
+  const slides = useMemo(() => items.filter(Boolean), [items]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
   const firstSlide = slides[0];
@@ -49,10 +49,6 @@ export function ProfileSliderSection({
     return () => window.clearInterval(interval);
   }, [slides.length]);
 
-  if (slides.length === 0) {
-    return null;
-  }
-
   if (!firstSlide) {
     return null;
   }
@@ -63,7 +59,7 @@ export function ProfileSliderSection({
     <Section className="pt-2 lg:pt-4" containerClassName="space-y-4 px-4 sm:px-6 lg:px-6">
       <div className="space-y-1 text-center">
         <p className="text-xl font-semibold uppercase tracking-[0.02em] text-ink sm:text-2xl">{title}</p>
-        <p className="text-sm text-ink/60">{subtitle}</p>
+        {subtitle ? <p className="text-sm text-ink/60">{subtitle}</p> : null}
       </div>
 
       <div className="overflow-hidden bg-white">
@@ -88,24 +84,18 @@ export function ProfileSliderSection({
             });
           }}
         >
-          {loopSlides.map((item, index) => {
-            if (!item) {
-              return null;
-            }
-
-            return (
+          {loopSlides.map((item, index) => (
             <div key={`${item.image}-${index}`} className="w-full shrink-0">
               <OptimizedImage
                 src={item.image}
                 alt={item.title}
                 width={1200}
                 height={1500}
-                wrapperClassName="bg-white"
+                wrapperClassName="w-full bg-white"
                 className="aspect-[4/5] object-cover object-center"
               />
             </div>
-            );
-          })}
+          ))}
         </div>
       </div>
 

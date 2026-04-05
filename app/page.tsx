@@ -5,9 +5,10 @@ import { HomeCategoryNav } from "@/components/home/home-category-nav";
 import { HeroSection } from "@/components/home/hero-section";
 import { MainVideoSection } from "@/components/home/main-video-section";
 import { ProfileSliderSection } from "@/components/home/profile-slider-section";
+import { ServicesOverview } from "@/components/home/services-overview";
 import { CTAButton } from "@/components/shared/cta-button";
 import { Section } from "@/components/shared/section";
-import { getFeaturedPortfolioItems, getSiteConfig } from "@/lib/content";
+import { getFeaturedPortfolioItems, getFeaturedShootServices, getSiteConfig } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
@@ -19,9 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [config, featuredPortfolio] = await Promise.all([
+  const [config, featuredPortfolio, featuredServices] = await Promise.all([
     getSiteConfig(),
     getFeaturedPortfolioItems(),
+    getFeaturedShootServices(),
   ]);
 
   const heroItem = featuredPortfolio[0];
@@ -43,6 +45,18 @@ export default async function HomePage() {
       href: `/portfolio/${heroItem.slug}`,
       linkLabel: "자세히 살펴보기",
     },
+    {
+      image: "/images/custom/lookbook-kid.jpg",
+      title: "LOOKBOOK KID 촬영",
+      href: "/services",
+      linkLabel: "자세히 살펴보기",
+    },
+    {
+      image: "/images/custom/lookbook-adult.jpg",
+      title: "LOOKBOOK ADULT 촬영",
+      href: "/services",
+      linkLabel: "자세히 살펴보기",
+    },
   ];
 
   return (
@@ -50,7 +64,8 @@ export default async function HomePage() {
       <HomeCategoryNav items={config.navigation.header} />
       <HeroSection config={config} heroItem={heroItem} />
       <ProfileSliderSection items={profileSlides} />
-      <FeaturedPortfolio items={featuredPortfolio} />
+      <FeaturedPortfolio />
+      <ServicesOverview services={featuredServices} />
       <MainVideoSection />
 
       <Section className="pt-2 lg:pt-4">

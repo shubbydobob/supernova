@@ -1,14 +1,14 @@
 # AGENTS.md
 
-## Project Context
-- This project is a photography portfolio and brand site.
-- It is not an e-commerce project.
-- Do not add cart, checkout, payment, inventory, order management, or auth.
-- Reservation must remain an external Naver Booking link.
-- Stack: Next.js App Router, TypeScript, Tailwind CSS, Vercel.
+## 프로젝트 개요
+- 이 프로젝트는 사진 포트폴리오 및 브랜드 사이트다.
+- 이커머스 프로젝트가 아니다.
+- 장바구니, 체크아웃, 결제, 재고, 주문 관리, 인증 기능을 추가하지 않는다.
+- 예약은 반드시 외부 네이버 예약 링크를 유지한다.
+- 기술 스택은 Next.js App Router, TypeScript, Tailwind CSS, Vercel이다.
 
-## Source Of Truth
-- Read and follow these documents before large implementation changes:
+## 기준 문서
+- 큰 구현 변경 전에 아래 문서를 읽고 따른다.
   - `requirements.md`
   - `design.md`
   - `system-overview.md`
@@ -21,81 +21,82 @@
   - `ADR-003-reservation-integration.md`
   - `tasks.md`
 
-## Product Direction
-- MVP-first
-- static-first
-- mobile-first
-- SEO-aware
-- accessibility-aware
-- content-driven
+## 제품 방향
+- MVP 우선
+- 정적 사이트 우선
+- 모바일 우선
+- SEO 고려
+- 접근성 고려
+- 콘텐츠 중심
 
-## Design / UX Rules
-- Use `https://supernova001.cafe24.com/` as the visual reference.
-- Match the reference site as closely as practical without copying any e-commerce behavior.
-- Prefer image-first layouts.
-- Keep text minimal.
-- Use short headings.
-- Avoid long descriptions unless explicitly requested.
-- Let spacing, image scale, and composition carry most of the page.
-- Keep visual hierarchy quiet and clean.
+## 디자인 / UX 규칙
+- 시각적 기준 사이트는 `https://supernova001.cafe24.com/`를 사용한다.
+- 이커머스 동작은 복제하지 말고, 시각적으로는 가능한 한 기준 사이트와 가깝게 맞춘다.
+- 이미지 중심 레이아웃을 우선한다.
+- 텍스트는 최소한으로 유지한다.
+- 제목은 짧게 쓴다.
+- 사용자가 명시적으로 요청하지 않으면 긴 설명을 넣지 않는다.
+- 여백, 이미지 크기, 구성이 화면의 대부분을 설명하도록 둔다.
+- 시각적 위계는 조용하고 깔끔하게 유지한다.
 
-## Current Site Direction
-- Home should feel closer to a lookbook than a marketing landing page.
-- Mobile presentation is especially important and should be checked first.
-- In mobile and narrow widths, avoid switching to desktop layout too early.
-- Reduce unnecessary labels, utility bars, and duplicate navigation when they make the layout feel heavier than the reference.
-- Keep images large and prominent, but avoid over-cropping when the user asks for a smaller visible image area.
+## 현재 사이트 방향
+- 홈은 마케팅 랜딩 페이지보다 룩북에 더 가깝게 느껴져야 한다.
+- 모바일 표현을 특히 중요하게 보고 먼저 확인한다.
+- 모바일과 좁은 너비에서는 데스크톱 레이아웃으로 너무 일찍 전환하지 않는다.
+- 불필요한 라벨, 유틸리티 바, 중복 내비게이션은 기준 사이트보다 무겁게 느껴지면 줄인다.
+- 이미지는 크고 존재감 있게 유지하되, 사용자가 더 작은 노출 영역을 원할 때는 과도하게 크롭하지 않는다.
 
-## Header / Home Rules
-- The home page may use a dedicated category strip between the header and the main hero image when requested.
-- Avoid duplicate desktop navigation rows if the same information is already shown elsewhere on the page.
-- Keep the main hero text minimal.
-- If requested, prefer a single short title such as `Independent`.
-- On mobile, the right-side header action currently uses an Instagram icon and should link directly to the official Instagram account instead of a search or portfolio shortcut.
+## 헤더 / 홈 규칙
+- 요청이 있으면 홈에서 헤더와 메인 히어로 이미지 사이에 전용 카테고리 스트립을 둘 수 있다.
+- 같은 정보가 페이지 다른 곳에 이미 있으면 데스크톱 내비게이션 줄을 중복해서 두지 않는다.
+- 메인 히어로 텍스트는 최소한으로 유지한다.
+- 요청 시 `Independent` 같은 짧은 단일 타이틀을 우선한다.
+- 모바일에서 우측 헤더 액션은 인스타그램 아이콘을 사용하며, 검색이나 포트폴리오 바로가기가 아니라 공식 인스타그램 계정으로 직접 연결해야 한다.
 
-## Content Rules
-- Use local JSON content files.
-- Keep Zod validation active.
-- Fail clearly on invalid required content.
-- Keep the content model compatible with future detail pages.
+## 콘텐츠 규칙
+- 로컬 JSON 콘텐츠 파일을 사용한다.
+- Zod 검증은 유지한다.
+- 필수 콘텐츠가 잘못되면 명확하게 실패해야 한다.
+- 콘텐츠 모델은 향후 상세 페이지 확장과 호환되도록 유지한다.
 
-## Implementation Rules
-- Prefer Server Components by default.
-- Use Client Components only when interaction is required.
-- Keep dependencies minimal.
-- Use semantic HTML.
-- Reuse existing components before creating new ones.
-- Do not redesign working sections unnecessarily.
-- Do not introduce future features unless explicitly requested.
+## 구현 규칙
+- 기본적으로 Server Component를 우선 사용한다.
+- 상호작용이 필요할 때만 Client Component를 사용한다.
+- 의존성은 최소화한다.
+- 시맨틱 HTML을 사용한다.
+- 새 컴포넌트를 만들기 전에 기존 컴포넌트를 재사용한다.
+- 잘 동작하는 섹션은 불필요하게 재설계하지 않는다.
+- 명시적 요청이 없으면 미래 기능을 미리 추가하지 않는다.
 
-## Do Not Add Unless Requested
+## 요청이 없으면 추가하지 말 것
 - CMS
-- database
-- analytics
-- auth
-- custom booking flow
-- contact backend
-- filters, tabs, sorting UI
-- FAQ/blog/journal systems
+- 데이터베이스
+- 분석 도구
+- 인증
+- 커스텀 예약 흐름
+- 문의 백엔드
+- 필터, 탭, 정렬 UI
+- FAQ / 블로그 / 저널 시스템
 
-## Naming / Structure
-- Use kebab-case for file names.
-- Use PascalCase for React component names.
-- Keep folder structure aligned with the design and architecture docs.
+## 네이밍 / 구조
+- 파일 이름은 kebab-case를 사용한다.
+- React 컴포넌트 이름은 PascalCase를 사용한다.
+- 폴더 구조는 디자인 문서와 아키텍처 문서에 맞춘다.
 
-## Deployment Rules
-- GitHub push to `main` triggers Vercel auto deployment.
-- Prefer the current public URL as the working production URL:
+## 배포 규칙
+- GitHub `main` 브랜치에 푸시하면 Vercel 자동 배포가 실행된다.
+- 현재 운영 URL은 아래 주소를 우선 기준으로 사용한다.
   - `https://supernova-photo.vercel.app`
-- If alias behavior and project-domain behavior differ, prefer project-domain style public access.
+- 별칭 URL 동작과 프로젝트 도메인 URL 동작이 다르면, 프로젝트 도메인 방식의 공개 접근을 우선한다.
 
-## Git Rules
-- Write commit messages in Korean.
+## Git 규칙
+- 커밋 메시지는 한국어로 작성한다.
 
-## Working Style For Future Sessions
-- Make the change directly when the request is clear.
-- Verify with:
+## 이후 작업 방식
+- 요청이 명확하면 바로 수정한다.
+- 수정 후 아래 명령으로 검증한다.
   - `npm.cmd run typecheck`
   - `npm.cmd run build`
-- Push only after local verification when deployment is intended.
-- When the user asks for visual matching, optimize for exact visible differences first.
+- 작업이 끝나면 사용자가 따로 반복해서 말하지 않아도 가능한 범위에서 바로 커밋, 푸시, 배포까지 진행한다.
+- 배포 전에는 반드시 로컬 검증을 먼저 통과시킨다.
+- 사용자가 시각적 일치를 요청하면 구조 설명보다 눈에 보이는 차이를 먼저 맞춘다.
