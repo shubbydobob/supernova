@@ -4,6 +4,7 @@ import { FeaturedPortfolio } from "@/components/home/featured-portfolio";
 import { HomeCategoryNav } from "@/components/home/home-category-nav";
 import { HeroSection } from "@/components/home/hero-section";
 import { MainVideoSection } from "@/components/home/main-video-section";
+import { ProfileSliderSection } from "@/components/home/profile-slider-section";
 import { ServicesOverview } from "@/components/home/services-overview";
 import { CTAButton } from "@/components/shared/cta-button";
 import { Section } from "@/components/shared/section";
@@ -26,6 +27,7 @@ export default async function HomePage() {
   ]);
 
   const heroItem = featuredPortfolio[0];
+  const profileSliderImages = heroItem?.images.slice(1, 3) ?? [];
 
   if (!heroItem) {
     throw new Error("Home page requires at least one featured portfolio item.");
@@ -35,9 +37,10 @@ export default async function HomePage() {
     <>
       <HomeCategoryNav items={config.navigation.header} />
       <HeroSection config={config} heroItem={heroItem} />
-      <MainVideoSection />
+      <ProfileSliderSection images={profileSliderImages} />
       <FeaturedPortfolio items={featuredPortfolio} />
       <ServicesOverview services={featuredServices} />
+      <MainVideoSection />
 
       <Section className="pt-2 lg:pt-4">
         <div className="flex flex-col gap-3 border-t border-stone/80 pt-5 sm:flex-row lg:pt-8">
