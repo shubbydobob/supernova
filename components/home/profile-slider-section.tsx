@@ -1,23 +1,41 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 
 import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Section } from "@/components/shared/section";
 
+interface ProfileSlideItem {
+  image: string;
+  title: string;
+  href: string;
+  linkLabel?: string;
+}
+
 interface ProfileSliderSectionProps {
   title?: string;
   subtitle?: string;
-  images: string[];
+  items: ProfileSlideItem[];
 }
 
 export function ProfileSliderSection({
   title = "PHOTO WORK",
   subtitle = "진행 중인 프로필 사진",
-  images,
+  items,
 }: ProfileSliderSectionProps) {
-  const slides = images.slice(0, 2);
+  const slides = useMemo(() => items.slice(0, 2), [items]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
+  const firstSlide = slides[0];
+
+  const loopSlides = useMemo(() => {
+    if (slides.length < 2 || !firstSlide) {
+      return slides;
+    }
+
+    return [...slides, firstSlide];
+  }, [firstSlide, slides]);
 
   useEffect(() => {
     if (slides.length < 2) {
@@ -25,8 +43,8 @@ export function ProfileSliderSection({
     }
 
     const interval = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % slides.length);
-    }, 800);
+      setActiveIndex((current) => current + 1);
+    }, 1500);
 
     return () => window.clearInterval(interval);
   }, [slides.length]);
@@ -34,6 +52,12 @@ export function ProfileSliderSection({
   if (slides.length === 0) {
     return null;
   }
+
+  if (!firstSlide) {
+    return null;
+  }
+
+  const visibleSlide = slides[activeIndex % slides.length] ?? firstSlide;
 
   return (
     <Section className="pt-2 lg:pt-4" containerClassName="space-y-4 px-4 sm:px-6 lg:px-6">
@@ -44,22 +68,55 @@ export function ProfileSliderSection({
 
       <div className="overflow-hidden bg-white">
         <div
-          className="flex transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          className="flex"
+          style={{
+            transform: `translateX(-${activeIndex * 100}%)`,
+            transition: isTransitionEnabled ? "transform 650ms ease-in-out" : "none",
+          }}
+          onTransitionEnd={() => {
+            if (slides.length < 2 || activeIndex !== slides.length) {
+              return;
+            }
+
+            setIsTransitionEnabled(false);
+            setActiveIndex(0);
+
+            window.requestAnimationFrame(() => {
+              window.requestAnimationFrame(() => {
+                setIsTransitionEnabled(true);
+              });
+            });
+          }}
         >
-          {slides.map((image, index) => (
-            <div key={image} className="w-full shrink-0">
+          {loopSlides.map((item, index) => {
+            if (!item) {
+              return null;
+            }
+
+            return (
+            <div key={`${item.image}-${index}`} className="w-full shrink-0">
               <OptimizedImage
-                src={image}
-                alt={`${title} ${index + 1}`}
+                src={item.image}
+                alt={item.title}
                 width={1200}
                 height={1500}
                 wrapperClassName="bg-white"
                 className="aspect-[4/5] object-cover object-center"
               />
             </div>
-          ))}
+            );
+          })}
         </div>
+      </div>
+
+      <div className="space-y-2 px-1">
+        <p className="text-[1.6rem] font-semibold tracking-[-0.03em] text-ink">{visibleSlide.title}</p>
+        <Link
+          href={visibleSlide.href}
+          className="inline-flex text-sm text-ink/60 underline underline-offset-4 hover:text-ink"
+        >
+          {visibleSlide.linkLabel ?? "자세히 살펴보기"}
+        </Link>
       </div>
     </Section>
   );

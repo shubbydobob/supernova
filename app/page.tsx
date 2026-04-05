@@ -27,17 +27,31 @@ export default async function HomePage() {
   ]);
 
   const heroItem = featuredPortfolio[0];
-  const profileSliderImages = heroItem?.images.slice(1, 3) ?? [];
 
   if (!heroItem) {
     throw new Error("Home page requires at least one featured portfolio item.");
   }
 
+  const profileSlides = [
+    {
+      image: heroItem.images[1] ?? heroItem.thumbnail,
+      title: "자연광 프로필 촬영",
+      href: `/portfolio/${heroItem.slug}`,
+      linkLabel: "자세히 살펴보기",
+    },
+    {
+      image: "/images/custom/woman-profile-03.png",
+      title: "자연광 주근깨 컨셉 촬영",
+      href: `/portfolio/${heroItem.slug}`,
+      linkLabel: "자세히 살펴보기",
+    },
+  ];
+
   return (
     <>
       <HomeCategoryNav items={config.navigation.header} />
       <HeroSection config={config} heroItem={heroItem} />
-      <ProfileSliderSection images={profileSliderImages} />
+      <ProfileSliderSection items={profileSlides} />
       <FeaturedPortfolio items={featuredPortfolio} />
       <ServicesOverview services={featuredServices} />
       <MainVideoSection />
