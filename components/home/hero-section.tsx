@@ -13,8 +13,7 @@ export function HeroSection({ config, heroItem }: HeroSectionProps) {
 
   return (
     <Section className="pt-0 lg:pt-10" containerClassName="space-y-0 px-0 lg:space-y-6 lg:px-6">
-      <div className="hidden space-y-3 lg:block">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-clay">SU.PERNOVA_</p>
+      <div className="hidden lg:block">
         <h1 className="max-w-2xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
           {config.brand.tagline}
         </h1>

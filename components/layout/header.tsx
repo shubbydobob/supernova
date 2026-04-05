@@ -56,22 +56,6 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Container>
       </div>
 
-      <div className="hidden lg:block">
-        <Container className="flex min-h-11 items-center justify-between gap-4 border-b border-stone/60 text-[11px] uppercase tracking-[0.28em] text-ink/70">
-          <Link href="/" className="py-3 font-medium">
-            SU.PERNOVA_
-          </Link>
-          <a
-            href="https://instagram.com/su.pernova_"
-            target="_blank"
-            rel="noreferrer"
-            className="py-3"
-          >
-            Instagram
-          </a>
-        </Container>
-      </div>
-
       <Container className="hidden items-center justify-center py-5 lg:flex">
         <Link href="/" aria-label={brandName}>
           <Image
@@ -83,28 +67,6 @@ export function Header({ brandName, navigation }: HeaderProps) {
             className="h-auto w-[180px] sm:w-[220px]"
           />
         </Link>
-      </Container>
-
-      <Container className="hidden border-t border-stone/60 lg:flex">
-        <nav aria-label="Primary" className="flex min-h-12 items-center gap-8 text-[12px] font-medium uppercase tracking-[0.24em]">
-          {navigation.map((item) => {
-            const isActive = item.href === pathname;
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "py-3 transition-colors",
-                  isActive ? "text-ink" : "text-ink/65 hover:text-ink",
-                )}
-                aria-current={isActive ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
       </Container>
 
       <MobileMenu
