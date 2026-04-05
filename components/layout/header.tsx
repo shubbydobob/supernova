@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -56,17 +55,23 @@ export function Header({ brandName, navigation }: HeaderProps) {
         </Container>
       </div>
 
-      <Container className="hidden items-center justify-center py-5 lg:flex">
-        <Link href="/" aria-label={brandName}>
-          <Image
-            src="/brand/logo-top.jpg"
-            alt={brandName}
-            width={280}
-            height={60}
-            priority
-            className="h-auto w-[180px] sm:w-[220px]"
-          />
+      <Container className="hidden lg:grid lg:min-h-24 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+        <div />
+        <Link
+          href="/"
+          aria-label={brandName}
+          className="text-center font-serif text-[4.4rem] uppercase leading-none tracking-[-0.05em] text-ink"
+        >
+          SU.PERNOVA_
         </Link>
+        <a
+          href="https://instagram.com/su.pernova_"
+          target="_blank"
+          rel="noreferrer"
+          className="justify-self-end text-[11px] uppercase tracking-[0.28em] text-ink/70 transition-colors hover:text-ink"
+        >
+          Instagram
+        </a>
       </Container>
 
       <MobileMenu
