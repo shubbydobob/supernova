@@ -23,7 +23,6 @@ export function MobileMenu({ brandName, currentPath, isOpen, items, onClose }: M
       )}
     >
       <div className="space-y-1 px-4 py-4">
-        <p className="pb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-clay">{brandName}</p>
         {items.map((item) => {
           const isActive = item.href === currentPath;
 
