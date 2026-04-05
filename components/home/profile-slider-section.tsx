@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import type { StaticImageData } from "next/image";
 
 import { OptimizedImage } from "@/components/shared/optimized-image";
 import { Section } from "@/components/shared/section";
 
 interface ProfileSlideItem {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   href: string;
   linkLabel?: string;
@@ -17,12 +18,14 @@ interface ProfileSliderSectionProps {
   title?: string;
   subtitle?: string;
   items: ProfileSlideItem[];
+  hideDetails?: boolean;
 }
 
 export function ProfileSliderSection({
   title = "PHOTO WORK",
   subtitle,
   items,
+  hideDetails = false,
 }: ProfileSliderSectionProps) {
   const slides = useMemo(() => items.filter(Boolean), [items]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -99,15 +102,17 @@ export function ProfileSliderSection({
         </div>
       </div>
 
-      <div className="space-y-2 px-1">
-        <p className="text-[1.6rem] font-semibold tracking-[-0.03em] text-ink">{visibleSlide.title}</p>
-        <Link
-          href={visibleSlide.href}
-          className="inline-flex text-sm text-ink/60 underline underline-offset-4 hover:text-ink"
-        >
-          {visibleSlide.linkLabel ?? "자세히 살펴보기"}
-        </Link>
-      </div>
+      {hideDetails ? null : (
+        <div className="space-y-2 px-1">
+          <p className="text-[1.6rem] font-semibold tracking-[-0.03em] text-ink">{visibleSlide.title}</p>
+          <Link
+            href={visibleSlide.href}
+            className="inline-flex text-sm text-ink/60 underline underline-offset-4 hover:text-ink"
+          >
+            {visibleSlide.linkLabel ?? "자세히 살펴보기"}
+          </Link>
+        </div>
+      )}
     </Section>
   );
 }
