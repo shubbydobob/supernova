@@ -5,7 +5,7 @@
   "category": "wedding",
   "thumbnail": "/images/reference/woman-profile-01.jpg",
   "images": [
-    "/images/custom/independent-sign.png",
+    "/images/custom/independent.jpg",
     "/images/reference/woman-profile-01.jpg",
     "/images/reference/woman-profile-02.jpg"
   ],
@@ -14,6 +14,6 @@
   "seo": {
     "title": "Woman Profile Photography",
     "description": "Natural light profile photography with a soft mood, minimal styling, and a quiet editorial frame.",
-    "ogImage": "/images/custom/independent-sign.png"
+    "ogImage": "/images/custom/independent.jpg"
   }
 }

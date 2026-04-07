@@ -1,0 +1,12 @@
+
+> supernova@1.0.0 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.111:3000
+✓ Ready in 246ms
+
+ GET / 200 in 398ms (next.js: 132ms, application-code: 265ms)
+ GET / 200 in 94ms (next.js: 3ms, application-code: 90ms)
+ GET / 200 in 84ms (next.js: 3ms, application-code: 81ms)
