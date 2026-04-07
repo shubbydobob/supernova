@@ -57,10 +57,10 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
         ]}
       />
 
-      <Section className="pt-10 sm:pt-14">
-        <div className="space-y-8">
+      <Section className="pt-8 sm:pt-12">
+        <div className="mx-auto max-w-4xl space-y-8">
           <div className="text-center">
-            <h1 className="text-2xl font-semibold text-ink sm:text-3xl">{item.title}</h1>
+            <h1 className="text-xl font-normal text-ink sm:text-2xl">{item.title}</h1>
           </div>
           <ImageGallery images={item.images} alt={item.title} />
         </div>

@@ -7,20 +7,19 @@ interface ImageGalleryProps {
 
 export function ImageGallery({ images, alt }: ImageGalleryProps) {
   return (
-    <section aria-labelledby="portfolio-gallery-heading" className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2">
-        {images.map((image, index) => (
+    <section aria-labelledby="portfolio-gallery-heading" className="space-y-4">
+      {images.map((image, index) => (
+        <div key={image} className="w-full">
           <OptimizedImage
-            key={image}
             src={image}
             alt={`${alt} image ${index + 1}`}
             width={1200}
             height={1500}
             wrapperClassName="overflow-hidden bg-white"
-            className="aspect-[3/4] object-cover"
+            className="w-full object-cover"
           />
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   );
 }
