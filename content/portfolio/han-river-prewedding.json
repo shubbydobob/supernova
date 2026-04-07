@@ -1,17 +1,19 @@
 {
   "slug": "han-river-prewedding",
-  "title": "woman profile",
+  "title": "Woman Profile",
   "description": "Natural light profile work with a soft, quiet frame.",
   "category": "wedding",
-  "thumbnail": "/images/portfolio/lookbook-23ss.jpg",
+  "thumbnail": "/images/custom/independent.jpg",
   "images": [
-    "/images/portfolio/lookbook-23ss.jpg"
+    "/images/custom/independent.jpg",
+    "/images/reference/woman-profile-01.jpg",
+    "/images/reference/woman-profile-02.jpg"
   ],
   "featured": true,
   "date": "2025-10-18",
   "seo": {
     "title": "Woman Profile Photography",
     "description": "Natural light profile photography with a soft mood, minimal styling, and a quiet editorial frame.",
-    "ogImage": "/images/portfolio/lookbook-23ss.jpg"
+    "ogImage": "/images/custom/independent.jpg"
   }
 }
