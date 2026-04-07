@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ImageGallery } from "@/components/portfolio/image-gallery";
 import { Section } from "@/components/shared/section";
 import { getPortfolioItem, getPortfolioItems, getSiteConfig } from "@/lib/content";
@@ -49,14 +48,6 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
 
   return (
     <>
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Profile", href: "/portfolio" },
-          { label: item.title },
-        ]}
-      />
-
       <Section className="pt-8 sm:pt-12">
         <div className="mx-auto max-w-3xl space-y-8">
           <div className="text-center">
