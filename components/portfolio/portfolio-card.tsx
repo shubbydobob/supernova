@@ -12,26 +12,20 @@ export function PortfolioCard({ item, href }: PortfolioCardProps) {
   const safeHref = href ?? `/portfolio/${item.slug}`;
 
   return (
-    <article
-      id={item.slug}
-      className="overflow-hidden bg-white md:rounded-[1.75rem] md:border md:border-stone md:shadow-card"
-    >
+    <article id={item.slug} className="group">
       <Link href={safeHref} className="block">
         <OptimizedImage
           src={item.thumbnail}
           alt={item.title}
           width={900}
           height={1100}
-          wrapperClassName="bg-sand"
-          className="aspect-[11/10] object-contain object-top md:aspect-[4/5] md:object-cover"
+          wrapperClassName="bg-sand overflow-hidden"
+          className="aspect-[3/4] object-cover transition-opacity group-hover:opacity-90"
         />
+        <div className="mt-3 space-y-1">
+          <h3 className="text-sm font-normal text-ink">{item.title}</h3>
+        </div>
       </Link>
-      <div className="space-y-2 px-4 py-4 md:px-2">
-        <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-        <Link href={safeHref} className="inline-flex text-sm font-semibold text-ink hover:text-clay">
-          View work
-        </Link>
-      </div>
     </article>
   );
 }

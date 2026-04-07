@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ImageGallery } from "@/components/portfolio/image-gallery";
-import { PortfolioMeta } from "@/components/portfolio/portfolio-meta";
-import { CTAButton } from "@/components/shared/cta-button";
 import { Section } from "@/components/shared/section";
 import { getPortfolioItem, getPortfolioItems, getSiteConfig } from "@/lib/content";
 
@@ -60,27 +58,11 @@ export default async function PortfolioDetailPage({ params }: PortfolioDetailPag
       />
 
       <Section className="pt-10 sm:pt-14">
-        <div className="space-y-10">
-          <PortfolioMeta item={item} />
+        <div className="space-y-8">
+          <div className="text-center">
+            <h1 className="text-2xl font-semibold text-ink sm:text-3xl">{item.title}</h1>
+          </div>
           <ImageGallery images={item.images} alt={item.title} />
-        </div>
-      </Section>
-
-      <Section>
-        <div className="rounded-[1.75rem] border border-stone bg-white/80 p-6 shadow-card sm:p-8">
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Next Step</p>
-            <h2 className="text-2xl font-semibold text-ink">Interested in a similar session or visual direction?</h2>
-            <p className="max-w-2xl text-sm leading-6 text-ink/75 sm:text-base">
-              Explore lookbook or send a quick inquiry.
-            </p>
-          </div>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <CTAButton href="/lookbook">Explore lookbook</CTAButton>
-            <CTAButton href="/contact" variant="secondary">
-              Start an inquiry
-            </CTAButton>
-          </div>
         </div>
       </Section>
     </>
