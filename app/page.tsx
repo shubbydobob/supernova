@@ -32,7 +32,7 @@ export default async function HomePage() {
 
   const profileSlides = [
     {
-      image: heroItem.images[1] ?? heroItem.thumbnail,
+      image: "/images/reference/woman-profile-01.jpg",
       title: "자연광 프로필 촬영",
       href: `/portfolio/${heroItem.slug}`,
       linkLabel: "자세히 살펴보기",
