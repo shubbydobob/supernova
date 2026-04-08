@@ -44,7 +44,7 @@ export default async function LookbookPage() {
           >
             <Link href={href} className="block">
               <OptimizedImage
-                src={lookbookItem.images[0] ?? lookbookItem.seo.ogImage ?? "/images/reference/lookbook-01.jpg"}
+                src={lookbookItem.seo.ogImage ?? lookbookItem.images[0] ?? "/images/reference/lookbook-01.jpg"}
                 alt="Lookbook"
                 width={900}
                 height={1100}

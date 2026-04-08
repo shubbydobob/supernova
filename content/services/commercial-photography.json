@@ -11,8 +11,8 @@
     "Usage-ready delivery"
   ],
   "images": [
-    "/images/reference/lookbook-01.jpg",
-    "/images/reference/lookbook-02.jpg"
+    "/images/services/lookbook-23ss-detail-01.jpg",
+    "/images/services/lookbook-23ss-detail-02.jpg"
   ],
   "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
   "featured": true,
@@ -20,6 +20,6 @@
   "seo": {
     "title": "Lookbook Shoot Service",
     "description": "Lookbook shoot service with clean visual rhythm, restrained styling, and external Naver Booking compatibility.",
-    "ogImage": "/images/reference/lookbook-01.jpg"
+    "ogImage": "/images/portfolio/portfolio-lookbook-23ss.jpg"
   }
 }

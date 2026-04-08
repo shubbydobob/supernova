@@ -6,6 +6,8 @@ interface ServiceDetailsProps {
 }
 
 export function ServiceDetails({ service }: ServiceDetailsProps) {
+  const isLookbookDetail = service.slug === "commercial-photography";
+
   return (
     <div className="space-y-10">
       <section aria-labelledby="service-overview-heading" className="space-y-6">
@@ -36,19 +38,35 @@ export function ServiceDetails({ service }: ServiceDetailsProps) {
             Recent examples
           </h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          {service.images.map((image, index) => (
-            <OptimizedImage
-              key={image}
-              src={image}
-              alt={`${service.title} sample ${index + 1}`}
-              width={1200}
-              height={900}
-              wrapperClassName={index === 0 ? "overflow-hidden rounded-[1.75rem] border border-stone bg-white shadow-card md:col-span-2" : "overflow-hidden rounded-[1.75rem] border border-stone bg-white shadow-card"}
-              className={index === 0 ? "aspect-[16/10]" : "aspect-[4/3]"}
-            />
-          ))}
-        </div>
+        {isLookbookDetail ? (
+          <div className="space-y-4">
+            {service.images.map((image, index) => (
+              <OptimizedImage
+                key={image}
+                src={image}
+                alt={`${service.title} sample ${index + 1}`}
+                width={1200}
+                height={1600}
+                wrapperClassName="border border-stone bg-white"
+                className="h-auto w-full object-contain"
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="grid gap-4 md:grid-cols-2">
+            {service.images.map((image, index) => (
+              <OptimizedImage
+                key={image}
+                src={image}
+                alt={`${service.title} sample ${index + 1}`}
+                width={1200}
+                height={900}
+                wrapperClassName={index === 0 ? "overflow-hidden rounded-[1.75rem] border border-stone bg-white shadow-card md:col-span-2" : "overflow-hidden rounded-[1.75rem] border border-stone bg-white shadow-card"}
+                className={index === 0 ? "aspect-[16/10]" : "aspect-[4/3]"}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section aria-labelledby="service-deliverables-heading" className="rounded-[1.75rem] border border-stone bg-sand/60 p-6 shadow-card">
