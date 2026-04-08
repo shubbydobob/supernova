@@ -38,19 +38,19 @@ export default async function HomePage() {
       linkLabel: "자세히 살펴보기",
     },
     {
-      image: "/images/custom/woman-profile-03.png",
+      image: "/images/custom/home-photo-work-woman-profile-03.png",
       title: "자연광 주근깨 컨셉 촬영",
       href: `/portfolio/${heroItem.slug}`,
       linkLabel: "자세히 살펴보기",
     },
     {
-      image: "/images/custom/lookbook-kid.jpg",
+      image: "/images/custom/home-photo-work-lookbook-kids.jpg",
       title: "LOOKBOOK KIDS 촬영",
       href: "/lookbook",
       linkLabel: "자세히 살펴보기",
     },
     {
-      image: "/images/custom/lookbook-adult.jpg",
+      image: "/images/custom/home-photo-work-lookbook-adult.jpg",
       title: "LOOKBOOK ADULT 촬영",
       href: "/lookbook",
       linkLabel: "자세히 살펴보기",

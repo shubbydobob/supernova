@@ -3,15 +3,15 @@
   "title": "man profile",
   "description": "A compact lookbook edit with clean rhythm and mood.",
   "category": "commercial",
-  "thumbnail": "/images/portfolio/lookbook-23ss.jpg",
+  "thumbnail": "/images/portfolio/portfolio-lookbook-23ss.jpg",
   "images": [
-    "/images/portfolio/lookbook-23ss.jpg"
+    "/images/portfolio/portfolio-lookbook-23ss.jpg"
   ],
   "featured": true,
   "date": "2025-10-24",
   "seo": {
     "title": "Lookbook Photography",
     "description": "Lookbook photography with a clean sequence, balanced frame, and restrained commercial mood.",
-    "ogImage": "/images/portfolio/lookbook-23ss.jpg"
+    "ogImage": "/images/portfolio/portfolio-lookbook-23ss.jpg"
   }
 }
