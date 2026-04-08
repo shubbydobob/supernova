@@ -37,28 +37,21 @@ export default async function LookbookPage() {
       </Section>
 
       <Section>
-        <div className="grid gap-0 md:gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <article
-            id={lookbookItem.slug}
-            className="overflow-hidden bg-white md:rounded-[1.75rem] md:border md:border-stone md:shadow-card"
-          >
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          <article id={lookbookItem.slug} className="group">
             <Link href={href} className="block">
               <OptimizedImage
                 src={lookbookItem.seo.ogImage ?? lookbookItem.images[0] ?? "/images/reference/lookbook-01.jpg"}
                 alt="Lookbook"
                 width={900}
                 height={1100}
-                wrapperClassName="bg-sand"
-                className="aspect-[11/10] object-contain object-top md:aspect-[4/5] md:object-cover"
+                wrapperClassName="bg-sand overflow-hidden"
+                className="aspect-[3/4] object-cover transition-opacity group-hover:opacity-90"
               />
+              <div className="mt-3 space-y-1">
+                <h1 className="text-sm font-normal text-ink">lookbook</h1>
+              </div>
             </Link>
-            <div className="space-y-2 px-4 py-4 md:px-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clay">LOOKBOOK</p>
-              <h1 className="text-lg font-semibold text-ink">Lookbook</h1>
-              <Link href={href} className="inline-flex text-sm font-semibold text-ink hover:text-clay">
-                View work
-              </Link>
-            </div>
           </article>
         </div>
       </Section>
