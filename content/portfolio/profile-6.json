@@ -3,15 +3,15 @@
   "title": "man profile",
   "description": "Natural light profile work with a calm, direct frame.",
   "category": "portrait",
-  "thumbnail": "/images/portfolio/portfolio-profile-06.jpg",
+  "thumbnail": "/images/portfolio/source-profile-man-17.jpg",
   "images": [
-    "/images/portfolio/portfolio-profile-06.jpg"
+    "/images/portfolio/source-profile-man-17.jpg"
   ],
   "featured": true,
-  "date": "2025-10-01",
+  "date": "2025-10-02",
   "seo": {
     "title": "Man Profile Photography",
     "description": "Natural light profile photography with a calm mood, clean styling, and a direct editorial frame.",
-    "ogImage": "/images/portfolio/portfolio-profile-06.jpg"
+    "ogImage": "/images/portfolio/source-profile-man-17.jpg"
   }
 }

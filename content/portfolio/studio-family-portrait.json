@@ -3,16 +3,15 @@
   "title": "man profile",
   "description": "Simple profile portrait with a calm, direct composition.",
   "category": "portrait",
-  "thumbnail": "/images/reference/man-profile-01.jpg",
+  "thumbnail": "/images/portfolio/source-profile-man-18.jpg",
   "images": [
-    "/images/reference/man-profile-01.jpg",
-    "/images/reference/man-profile-02.jpg"
+    "/images/portfolio/source-profile-man-18.jpg"
   ],
   "featured": true,
-  "date": "2025-10-23",
+  "date": "2025-10-01",
   "seo": {
     "title": "Man Profile Photography",
     "description": "Minimal profile portrait photography with direct framing, clean light, and a calm editorial tone.",
-    "ogImage": "/images/reference/man-profile-01.jpg"
+    "ogImage": "/images/portfolio/source-profile-man-18.jpg"
   }
 }
