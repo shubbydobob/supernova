@@ -32,8 +32,8 @@ export default async function HomePage() {
 
   const homeHeroItem = {
     ...heroItem,
-    thumbnail: "/images/reference/woman-profile-01.jpg",
-    images: ["/images/reference/woman-profile-01.jpg"],
+    thumbnail: "/images/custom/home-independent.jpg",
+    images: ["/images/custom/home-independent.jpg"],
   };
 
   const profileSlides = [
