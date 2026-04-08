@@ -30,6 +30,12 @@ export default async function HomePage() {
     throw new Error("Home page requires at least one featured portfolio item.");
   }
 
+  const homeHeroItem = {
+    ...heroItem,
+    thumbnail: "/images/reference/woman-profile-01.jpg",
+    images: ["/images/reference/woman-profile-01.jpg"],
+  };
+
   const profileSlides = [
     {
       image: "/images/reference/woman-profile-01.jpg",
@@ -60,7 +66,7 @@ export default async function HomePage() {
   return (
     <>
       <HomeCategoryNav items={config.navigation.header} />
-      <HeroSection config={config} heroItem={heroItem} />
+      <HeroSection config={config} heroItem={homeHeroItem} />
       <FeaturedPortfolio />
       <ProfileSliderSection items={profileSlides} />
       <ServicesOverview services={featuredServices} />
