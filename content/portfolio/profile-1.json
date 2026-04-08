@@ -3,15 +3,15 @@
   "title": "woman profile",
   "description": "Natural light profile work with a soft, quiet frame.",
   "category": "portrait",
-  "thumbnail": "/images/portfolio/profile-1.jpg",
+  "thumbnail": "/images/portfolio/independent.jpg",
   "images": [
-    "/images/portfolio/profile-1.jpg"
+    "/images/portfolio/independent.jpg"
   ],
   "featured": true,
   "date": "2025-11-03",
   "seo": {
     "title": "Woman Profile Photography",
     "description": "Natural light profile photography with a soft mood, minimal styling, and a quiet editorial frame.",
-    "ogImage": "/images/portfolio/profile-1.jpg"
+    "ogImage": "/images/portfolio/independent.jpg"
   }
 }
