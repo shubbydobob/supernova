@@ -11,25 +11,12 @@
     "Usage-ready delivery"
   ],
   "images": [
-    "/images/services/lookbook-card-28.jpg",
-    "/images/services/lookbook-card-29.jpg",
-    "/images/services/lookbook-card-30.jpg",
-    "/images/services/lookbook-card-31.jpg",
-    "/images/services/lookbook-card-32.jpg",
-    "/images/services/lookbook-card-33.jpg",
-    "/images/services/lookbook-card-34.jpg",
-    "/images/services/lookbook-card-35.jpg",
-    "/images/services/lookbook-card-36.jpg",
-    "/images/services/lookbook-card-37.jpg",
-    "/images/services/lookbook-card-38.jpg",
-    "/images/services/lookbook-card-39.jpg",
-    "/images/services/lookbook-card-40.jpg",
-    "/images/services/lookbook-card-41.jpg",
-    "/images/services/lookbook-card-42.jpg",
-    "/images/services/lookbook-card-43.jpg",
     "/images/services/lookbook-card-44.jpg",
-    "/images/services/lookbook-card-45.jpg",
-    "/images/services/lookbook-card-46.jpg"
+    "/images/services/lookbook-card-43.jpg",
+    "/images/services/lookbook-card-42.jpg",
+    "/images/services/lookbook-card-38.jpg",
+    "/images/services/lookbook-card-31.jpg",
+    "/images/services/lookbook-card-28.jpg"
   ],
   "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
   "featured": true,
@@ -37,6 +24,6 @@
   "seo": {
     "title": "Lookbook Shoot Service",
     "description": "Lookbook shoot service with clean visual rhythm, restrained styling, and external Naver Booking compatibility.",
-    "ogImage": "/images/services/lookbook-list-thumb-01.jpg"
+    "ogImage": "/images/services/lookbook-card-44.jpg"
   }
 }
