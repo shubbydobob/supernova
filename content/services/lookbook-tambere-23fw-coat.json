@@ -1,0 +1,24 @@
+{
+  "slug": "lookbook-tambere-23fw-coat",
+  "title": "TAMBERE 23FW LOOKBOOK",
+  "description": "Selected coat image from the Tambere 23FW lookbook series.",
+  "shortDescription": "Selected Tambere 23FW coat image.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/services/lookbook-card-38.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": false,
+  "order": 104,
+  "seo": {
+    "title": "TAMBERE 23FW LOOKBOOK",
+    "description": "Selected coat image from the Tambere 23FW lookbook collection shown on the lookbook page.",
+    "ogImage": "/images/services/lookbook-card-38.jpg"
+  }
+}

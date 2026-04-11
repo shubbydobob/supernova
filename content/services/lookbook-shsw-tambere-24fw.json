@@ -1,0 +1,24 @@
+{
+  "slug": "lookbook-shsw-tambere-24fw",
+  "title": "SHSW x TAMBERE 24FW LOOKBOOK",
+  "description": "Selected lookbook image from the SHSW x Tambere 24FW series.",
+  "shortDescription": "Selected SHSW x Tambere 24FW lookbook image.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/services/lookbook-card-44.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": false,
+  "order": 101,
+  "seo": {
+    "title": "SHSW x TAMBERE 24FW LOOKBOOK",
+    "description": "Selected image from the SHSW x Tambere 24FW lookbook collection shown on the lookbook page.",
+    "ogImage": "/images/services/lookbook-card-44.jpg"
+  }
+}

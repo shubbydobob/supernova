@@ -134,6 +134,16 @@ export async function getFeaturedShootServices(limit = 3): Promise<ShootService[
   return services.filter((service) => service.featured).slice(0, limit);
 }
 
+export async function getLookbookServices(): Promise<ShootService[]> {
+  const services = await getShootServices();
+  return services.filter((service) => service.slug.startsWith("lookbook-"));
+}
+
+export async function getLookbookService(slug: string): Promise<ShootService | undefined> {
+  const services = await getLookbookServices();
+  return services.find((service) => service.slug === slug);
+}
+
 export async function getPortfolioCategories(): Promise<string[]> {
   const items = await getPortfolioItems();
   return [...new Set(items.map((item) => item.category))];

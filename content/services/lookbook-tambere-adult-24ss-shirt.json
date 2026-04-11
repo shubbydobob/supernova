@@ -1,0 +1,24 @@
+{
+  "slug": "lookbook-tambere-adult-24ss-shirt",
+  "title": "TAMBERE ADULT 24SS LOOKBOOK",
+  "description": "Selected shirt image from the Tambere Adult 24SS lookbook series.",
+  "shortDescription": "Selected Tambere Adult 24SS shirt image.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/services/lookbook-card-42.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": false,
+  "order": 103,
+  "seo": {
+    "title": "TAMBERE ADULT 24SS LOOKBOOK",
+    "description": "Selected shirt image from the Tambere Adult 24SS lookbook collection shown on the lookbook page.",
+    "ogImage": "/images/services/lookbook-card-42.jpg"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "lookbook-custard-collection",
+  "title": "CUSTARD COLLECTION LOOKBOOK",
+  "description": "Selected image from the Custard Collection lookbook series.",
+  "shortDescription": "Selected Custard Collection lookbook image.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/services/lookbook-card-28.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": false,
+  "order": 106,
+  "seo": {
+    "title": "CUSTARD COLLECTION LOOKBOOK",
+    "description": "Selected image from the Custard Collection lookbook set shown on the lookbook page.",
+    "ogImage": "/images/services/lookbook-card-28.jpg"
+  }
+}

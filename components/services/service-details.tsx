@@ -6,7 +6,7 @@ interface ServiceDetailsProps {
 }
 
 export function ServiceDetails({ service }: ServiceDetailsProps) {
-  const isLookbookDetail = service.slug === "commercial-photography";
+  const isLookbookDetail = service.slug.startsWith("lookbook-");
 
   if (isLookbookDetail) {
     return (

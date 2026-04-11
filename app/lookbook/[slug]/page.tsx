@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ServiceDetails } from "@/components/services/service-details";
 import { Section } from "@/components/shared/section";
-import { getShootService, getShootServices, getSiteConfig } from "@/lib/content";
+import { getLookbookService, getLookbookServices, getSiteConfig } from "@/lib/content";
 
 interface LookbookDetailPageProps {
   params: Promise<{
@@ -12,13 +12,13 @@ interface LookbookDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  const services = await getShootServices();
+  const services = await getLookbookServices();
   return services.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: LookbookDetailPageProps): Promise<Metadata> {
   const [{ slug }, config] = await Promise.all([params, getSiteConfig()]);
-  const service = await getShootService(slug);
+  const service = await getLookbookService(slug);
 
   if (!service) {
     return {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: LookbookDetailPageProps): Pro
 
 export default async function LookbookDetailPage({ params }: LookbookDetailPageProps) {
   const { slug } = await params;
-  const service = await getShootService(slug);
+  const service = await getLookbookService(slug);
 
   if (!service) {
     notFound();

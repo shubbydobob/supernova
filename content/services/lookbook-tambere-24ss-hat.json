@@ -1,0 +1,24 @@
+{
+  "slug": "lookbook-tambere-24ss-hat",
+  "title": "TAMBERE 24SS LOOKBOOK",
+  "description": "Selected hat image from the Tambere 24SS lookbook series.",
+  "shortDescription": "Selected Tambere 24SS hat image.",
+  "pricing": "Custom estimate after consultation",
+  "duration": "Half day to multi-day",
+  "deliverables": [
+    "Edited campaign selects",
+    "Simple pre-shoot alignment",
+    "Usage-ready delivery"
+  ],
+  "images": [
+    "/images/services/lookbook-card-31.jpg"
+  ],
+  "bookingUrl": "https://booking.naver.com/booking/12/bizes/123456",
+  "featured": false,
+  "order": 105,
+  "seo": {
+    "title": "TAMBERE 24SS LOOKBOOK",
+    "description": "Selected hat image from the Tambere 24SS lookbook collection shown on the lookbook page.",
+    "ogImage": "/images/services/lookbook-card-31.jpg"
+  }
+}
