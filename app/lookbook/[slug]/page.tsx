@@ -47,10 +47,8 @@ export default async function LookbookDetailPage({ params }: LookbookDetailPageP
   }
 
   return (
-    <>
-      <Section className="pt-6 sm:pt-10">
-        <ServiceDetails service={service} />
-      </Section>
-    </>
+    <Section className="pt-2 sm:pt-4">
+      <ServiceDetails service={service} />
+    </Section>
   );
 }

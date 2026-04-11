@@ -10,7 +10,7 @@ export function ServiceDetails({ service }: ServiceDetailsProps) {
 
   if (isLookbookDetail) {
     return (
-      <section aria-label={`${service.title} gallery`} className="space-y-4">
+      <section aria-label={`${service.title} gallery`} className="space-y-2 sm:space-y-3">
         {service.images.map((image, index) => (
           <OptimizedImage
             key={image}
@@ -18,7 +18,7 @@ export function ServiceDetails({ service }: ServiceDetailsProps) {
             alt={`${service.title} sample ${index + 1}`}
             width={1200}
             height={1600}
-            wrapperClassName="border border-stone bg-white"
+            wrapperClassName="bg-white"
             className="h-auto w-full object-contain"
           />
         ))}

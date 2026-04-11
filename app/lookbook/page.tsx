@@ -29,32 +29,24 @@ export default async function LookbookPage() {
   const href = `/lookbook/${lookbookItem.slug}`;
 
   return (
-    <>
-      <Section className="pt-6 sm:pt-10">
-        <div className="border-b border-stone/80 pb-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-clay">Lookbook</p>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          <article id={lookbookItem.slug} className="group">
-            <Link href={href} className="block">
-              <OptimizedImage
-                src={lookbookItem.seo.ogImage ?? lookbookItem.images[0] ?? "/images/reference/lookbook-01.jpg"}
-                alt="Lookbook"
-                width={900}
-                height={1100}
-                wrapperClassName="bg-sand overflow-hidden"
-                className="aspect-[3/4] object-cover transition-opacity group-hover:opacity-90"
-              />
-              <div className="mt-3 space-y-1">
-                <h1 className="text-sm font-normal text-ink">lookbook</h1>
-              </div>
-            </Link>
-          </article>
-        </div>
-      </Section>
-    </>
+    <Section className="pt-4 sm:pt-6">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <article id={lookbookItem.slug} className="group">
+          <Link href={href} className="block">
+            <OptimizedImage
+              src={lookbookItem.seo.ogImage ?? lookbookItem.images[0] ?? "/images/reference/lookbook-01.jpg"}
+              alt="Lookbook"
+              width={900}
+              height={1100}
+              wrapperClassName="overflow-hidden bg-sand"
+              className="aspect-[3/4] object-cover transition-opacity group-hover:opacity-90"
+            />
+            <div className="mt-3">
+              <h1 className="text-sm font-normal text-ink">lookbook</h1>
+            </div>
+          </Link>
+        </article>
+      </div>
+    </Section>
   );
 }
