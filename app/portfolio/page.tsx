@@ -33,7 +33,7 @@ export default async function PortfolioPage() {
           <div>
             <p>♣ &lt;자연스러운 프로필&gt; 촬영 안내</p>
             <p>• 1착장 -보정본5장 / 원본 제공(jpg파일) 가격 : 12만 원</p>
-            <p>• 2착장 -보정본 10장 / 원본 제공 (jpg파일) 가격 : 20만원</p>
+            <p>• 2착장 -보정본 10장 / 원본 제공 (jpg파일) 가격 : 18만원</p>
           </div>
         </div>
       </Section>
